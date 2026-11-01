@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Error {{ error_code }} - CampusDrop{% endblock %}
+
+{% block content %}
+<div style="max-width: 500px; margin: 4rem auto; text-align: center; background: var(--bg-card); padding: 2.5rem; border-radius: var(--radius-xl); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-card);">
+  <h1 style="font-size: 3.5rem; font-weight: 800; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+    {{ error_code }}
+  </h1>
+  <p style="font-size: 1.1rem; color: var(--text-muted); margin: 1rem 0 2rem;">
+    {{ error_message or 'The requested page or file was not found.' }}
+  </p>
+  <a href="/" class="btn btn-primary">
+    Return to Campus Lobby
+  </a>
+</div>
+{% endblock %}
